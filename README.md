@@ -14,4 +14,4 @@ Quelques tutoriaux sur l'utilisation de la librairie Pygame pour la création de
 
 * [Scrolling](./scrolling/): Donner l'illusion que votre background se répéte à l'infini
 
-* [Approche Objet](./objet/): Gestion des mouvements de Mario.
+* [Approche Objet](./object/): Gestion des mouvements de Mario.
