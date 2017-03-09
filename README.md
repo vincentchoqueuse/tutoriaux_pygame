@@ -13,3 +13,5 @@ Quelques tutoriaux sur l'utilisation de la librairie Pygame pour la création de
 * [Event](./event/): Lire les informations du clavier.
 
 * [Scrolling](./scrolling/): Donner l'illusion que votre background se répéte à l'infini
+
+* [Approche Objet](./scrolling/): Gestion des mouvements de Mario.
