@@ -8,6 +8,7 @@ class Mario(pygame.sprite.Sprite):
     num_image=0
     full_image=None
     mario_width=17
+    z_pos=0
 
     def __init__(self):
         # Constructeur (initialisation de l'objet)
@@ -24,9 +25,12 @@ class Mario(pygame.sprite.Sprite):
             self.num_image=0
         if position=="RIGHT":
             self.num_image=1+((self.num_image)%3)  #num image varie de 1 à 4
+        if position=="JUMP":
+            self.z_pos+=10
 
     def update(self):
         self.image=self.full_image.subsurface( (self.num_image*self.mario_width+80, 0, self.mario_width, 40))
+        self.rect.y=self.rect.y-self.z_pos
         self.image=pygame.transform.scale(self.image, (34, 80))
 
 
@@ -64,6 +68,10 @@ while continuer:
                     background1_x=background1_x+1600
                 if background2_x < -800:
                     background2_x=background2_x+1600
+
+            if event.key==pygame.K_SPACE:
+                position="JUMP"
+
 
     #on appelle la methode de l'objet mon_mario
     mon_mario.move(position)
